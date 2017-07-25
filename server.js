@@ -7,6 +7,7 @@ const config = require('./webpack.config')
 new webpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
+    inline: true,
     historyApiFallback: true,
     stats: { colors: true }
 }).listen(3000, (err) => {
