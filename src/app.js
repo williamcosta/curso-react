@@ -1,16 +1,35 @@
 'use strict'
 
 import React from 'react'
-import Title from './title'
+import Search from './components/search'
+import UserInfo from './components/user-info'
+import Actions from './components/actions'
+import Repos from './components/repos'
 
-const App = React.createClass({
-  render: function () {
-    return (
-      <div>
-        <Title name='William Costa' />
-      </div>
-    )
-  }
-})
+const App = () => (
+  <div className='app'>
+    <Search />
+    <UserInfo />
+    <Actions />
+
+    <Repos
+      className='repos'
+      title='Repositórios:'
+      repos={[{
+        name: 'Nome do Repositório',
+        link: '#'
+      }]}
+    />
+
+    <Repos
+      className='starred'
+      title='Favoritos:'
+      repos={[{
+        name: 'Nome do Repositório',
+        link: '#'
+      }]}
+    />
+  </div>
+)
 
 export default App
