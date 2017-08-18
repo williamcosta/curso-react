@@ -63,10 +63,6 @@ class App extends Component {
     }
   }
 
-  getStarred (e) {
-    console.log('Starred')
-  }
-
   render () {
     return <AppContent
       userinfo={this.state.userinfo}
